@@ -1,0 +1,53 @@
+
+just want to gauge the mood of an anonymous crowd at an event and stream back their feeling on certain broad topics.  Primarily what their
+opinions are on real-time experiential things.  "How do you judge the mood of the crowd?", "how big do you think the crowd is", ""
+also let's them (eventually) push "experiential" content to the crowd.
+
+Of course the other aspect is to allow the crowd to synchronize it's efforts, possibly by soliciting ideas/suggestions and allowing people to self-organize into the top options,
+maybe even to unique, live-time, user generated questions
+sell is to event organizers, qr code driven "lets the room know it's mood, in the aggregate": "know the mood of the room"
+
+simple poc/proto
+----------------
+- set up git for the project -ok
+- layout screen with semantic-ui called as react components and reactrouter -ok
+- wire up some callbacks for the modals in semantic-ui - ok
+- wire up the mongo data sources -wip
+- integrate mapbox into dashboard -ok
+- wire up the mongo collection to the map.  Should probably have the geolocation update only when it has moved some distance ($geonear radius)
+- define function to call meteor method if server (no msgqueue).  If msg queue direct insert there
+
+
+
+==next bits
+
+streaming stats back to user:
+    - crowd size guesstimates as stated by the observer ("how big is the crowd" with the ability to see the result _only after_ you enter your guess
+    - crowd mood average only after you tell them your mood; crowd mood trend only if you provide updates.  (maybe implemented as locked buttons that you unlock
+    almost in a game like manner (like gaining greater acceptance within a peer group)
+    - gender demographics button that gives a crowd breakdown, but again only after you've
+
+
+
+
+// specifucked implementation ideas
+
+- Mondrian UI.
+        - Red for emotional perceptions of self and crowd,
+        - blue for ideas/guesstimates to share with the crowd
+        - green for observations/facts made by the actors about their local environmet
+        - orange for housekeeping items
+
+- situation dataset{situationType, lngLat, actor,timestamp, action, }: drop the latlng tag at the spot where the user was.  They're moving, you're moving.  Accuracy is a wash in the end.
+
+
+- for a laugh Random.choice(["pithy one","pithy 2", "etc"] // all from the language json
+
+
+
+so to move markers around the screen, we must associate a marker with an actor, or have some way of looking up a marker by id (or a layer by id)
+
+
+
+
+- understand the way history.goBack() functions, since it'll be faster
