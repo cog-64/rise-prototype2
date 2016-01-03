@@ -1,0 +1,18 @@
+{
+  "awsBucket": "my-example-staging"
+, "awsAccessKeyId": "your key id"
+, "awsSecretKey": "your secret key"
+, "public": {
+      "mapboxAccessToken":"your key here"
+    , "defaultMapZoom": 16
+    , "environment": "staging"
+    , "maxActors": 200
+    , "maxRadius": 10000
+    , "movementTolerance": 5
+    , "actionSearchRadius": 10000
+    , "maxEmotionRating": 10
+    , "showSimulations":true
+}
+
+
+}
