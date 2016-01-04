@@ -171,33 +171,18 @@ const SimulateMotion = React.createClass({
         actionId: React.PropTypes.string.isRequired
     },
 
-    componentDidMount() {
-        console.log("mounted simulated motion");
-        $('#simulated-motion-checkbox')
-            .checkbox()
-            .checkbox({onChecked: function() {
-                debugger;
-                ClientSimulations.startActorMotion( 0.00001, 500 );
-            },
-                onUnchecked: function() {
-                    ClientSimulations.stopActorMotion();
-                }})
 
 
-
-
+    walkActors() {
+        ClientSimulations.startActorMotion( 0.00001, 500, 60 )
     },
 
     render() {
         return (
             <div id="simulated-motion" className="ui top attached inverted brown segment">
-                <div id="simulated-motion-checkbox" className="ui brown slider checkbox">
-                    <input  type="checkbox" />
-                    <div className="ui inverted brown label">
-                        Toggle Brownian Motion
-                    </div>
-
-                </div>
+                <button className="ui  positive button" onClick={this.walkActors} >
+                    60 second actor walk
+                </button>
             </div>
         );
     }
