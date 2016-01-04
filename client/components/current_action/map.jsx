@@ -448,8 +448,8 @@ Map = React.createClass({
     panToLatLng() {
         if (this.data.panToLocation){
             debugger;
-            map.setZoom(21);
             map.panTo(this.data.panToLocation);
+            //map.setZoom(21);
             console.log(`panned to location`);
             IntercomponentComs.setPanToLatLng(null);
         }
