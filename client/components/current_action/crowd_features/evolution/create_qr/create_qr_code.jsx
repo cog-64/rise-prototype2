@@ -11,37 +11,29 @@ CreateQRCode = React.createClass({
 
     render() {
         return (
-            <div className="ui container grid">
-                <div claaName="row">
-
+            <div className="ui fluid grid container ">
+                <div className="ui center aligned column">
 
                     <div className="ui floating info message">
-                        <h1 className="ui left aligned header">
+                        <h1 className="ui header">
                             Let others join the action.
                         </h1>
 
                         <div className="ui horizontal divider">
                         </div>
 
-                        <h2 className="ui left aligned header">
-                            To keep things local and immediate, RISE uses
-                            QR codes to propagate the action.
-
+                        <h3 className="ui header">
                             Scanning this QR Code allows any web-enabled client to
-                            connect in and join this action.
-
-                        </h2>
+                            connect to this action.
+                        </h3>
                     </div>
-                </div>
+
 
                 <div className="ui horizontal divider">
                 </div>
-
-                <div className="row">
-                    <div className="ui center aligned column">
                         <GenerateQRCode actionURI={this.props.actionURI}/>
                     </div>
-                </div>
+
             </div>
         );
     }

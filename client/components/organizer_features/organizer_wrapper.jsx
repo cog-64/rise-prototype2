@@ -15,19 +15,20 @@ OrganizerWrapper = React.createClass({
                 let actionId = Session.get("currentActionId");
                 return `/actions/${actionId}`;
 
-            } else  if (location && location.state && location.state.returnTo)   {
-               return location.state.returnTo
+            } else if (location && location.state && location.state.returnTo) {
+                return location.state.returnTo
 
-           } else {
-               return '/'
-           }
+            } else {
+                return '/'
+            }
         };
 
 
         let { location } = this.props;
 
-            return (
-                <AdminModal returnTo={getReturnTo()} >
+        return (
+            <AdminModal returnTo={getReturnTo()}>
+                <div className="ui fluid grid container">
                     <div className="ui icon message">
                         <i className="notched circle loading icon"></i>
                         <div className="content">
@@ -36,16 +37,18 @@ OrganizerWrapper = React.createClass({
 
                             </div>
                             <p>
-                                An area for the action organizer to create, monitor and adjust an action. Containing, perhaps,  it's own menus and modals.  For now, I'll just
-                                commandeer the space for simulation utilities that help with testing and demonstrations...
+                                An area for the action organizer to create, monitor and adjust an action. Containing,
+                                perhaps, it's own menus and modals. For now, I'll just
+                                commandeer the space for simulation utilities that help with testing and
+                                demonstrations...
                             </p>
                         </div>
                     </div>
 
                     {this.showSimulations()}
-
-                </AdminModal>
-            )
+                </div>
+            </AdminModal>
+        )
 
     },
     render() {

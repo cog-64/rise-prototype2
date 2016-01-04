@@ -13,7 +13,7 @@ CreateQRWrapper = React.createClass({
     render() {
         return (
 
-                <div className="content">
+                <div className="ui fluid grid container">
                     <CreateQRCode  actionURI={ this.returnTo() } description={this.actionDescription()} />
                 </div>
 

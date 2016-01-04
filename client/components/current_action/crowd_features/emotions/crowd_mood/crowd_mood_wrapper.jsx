@@ -92,7 +92,7 @@ CrowdMoodWrapper= React.createClass({
     render() {
 
 
-        if (!this.data.subsReady || !this.data.mapIsReady ) {
+        if (!this.data.subsReady ) {
             //debugger;
             // className="full height"
             return  (
